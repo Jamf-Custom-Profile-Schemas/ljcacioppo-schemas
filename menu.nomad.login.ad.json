@@ -46,7 +46,7 @@
         "DenyLocalExcluded": {
             "title": "Deny Local User Exclusions",
             "description": "List of local user shortnames that will be allowed to authenticate locally instead of via AD.",
-            "propertyOrder": 10,
+            "propertyOrder": 15,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -72,7 +72,7 @@
         "DenyLoginUnlessGroupMember": {
             "title": "Allowed Group Membership User Logins",
             "description": "List of AD group names. When an AD user is authenticating, only allow login if the user is a member of one of these groups.",
-            "propertyOrder": 10,
+            "propertyOrder": 20,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -98,7 +98,7 @@
         "RecursiveGroupLookup": {
             "title": "Recursive Group Lookup",
             "description": "If set to yes, group membership lookups should be done recursively.",
-            "propertyOrder": 10,
+            "propertyOrder": 25,
             "anyOf": [
                  {
                     "title": "Not Configured",
@@ -120,7 +120,7 @@
         "Migrate": {
             "title": "Migrate",
             "description": "If true, migrate users",
-            "propertyOrder": 10,
+            "propertyOrder": 30,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -142,7 +142,7 @@
         "MigrateUsersHide": {
             "title": "Users Hidden From Migration",
             "description": "List of names of users that should be hidden from user migration candidates during selection",
-            "propertyOrder": 10,
+            "propertyOrder": 35,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -168,7 +168,7 @@
         "PasswordOverwriteSilent": {
             "title": "Password Overwrite Silent",
             "description": "When DenyLocal and PasswordOverwriteSilent are enabled and the user does not have a secure token NoLo will force overwrite the users password to the new password.",
-            "propertyOrder": 10,
+            "propertyOrder": 40,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -190,7 +190,7 @@
         "PasswordOverwriteOptional": {
             "title": "Password Overwrite Optional",
             "description": "When DenyLocal and PasswordOverwriteSilent are enabled and the user does not have a secure token NoLo will force overwrite the users password to the new password.",
-            "propertyOrder": 10,
+            "propertyOrder": 45,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -212,7 +212,7 @@
         "LocalFallback": {
             "title": "Local Fallback",
             "description": "When enabled, login fallbacks to local auth if the network is not available.",
-            "propertyOrder": 10,
+            "propertyOrder": 50,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -234,7 +234,7 @@
         "LDAPServers": {
             "title": "LDAP Servers",
             "description": "List of LDAP servers that you would like to use for AD authentication instead of using SRV record lookup.",
-            "propertyOrder": 10,
+            "propertyOrder": 55,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -260,7 +260,7 @@
         "LDAPOverSSL": {
             "title": "LDAP Over SSL",
             "description": "Determines if NoMAD Login uses LDAP over SSL.",
-            "propertyOrder": 10,
+            "propertyOrder": 60,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -282,7 +282,7 @@
         "AdditionalADDomains": {
             "title": "Additional Active Directory Domains",
             "description": "List of domains to append at the loginwindow. If not set, the standard Managed Domain policy will apply.",
-            "propertyOrder": 10,
+            "propertyOrder": 65,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -308,7 +308,7 @@
         "AdditionalADDomainsList": {
             "title": "Domain Dropdown List",
             "description": "List of LDAP servers to display in the pulldown menu in the Login Window. Users can select a domain from the menu and then only enter the shortname in the text field.",
-            "propertyOrder": 10,
+            "propertyOrder": 70,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -334,7 +334,7 @@
         "TextFields": {
             "title": "NT to AD Domain Mappings",
             "description": "List of LDAP servers to display in the pulldown menu in the Login Window. Users can select a domain from the menu and then only enter the shortname in the text field.",
-            "propertyOrder": 10,
+            "propertyOrder": 75,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -360,7 +360,7 @@
         "AliasNTName": {
             "title": "Alias NT Name",
             "description": "If enabled, the user's NT style name is added as an alias to the local account during account creation.",
-            "propertyOrder": 10,
+            "propertyOrder": 80,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -382,7 +382,7 @@
         "AliasUPN": {
             "title": "Alias User Principal Name",
             "description": "If enabled, the user's UserPrincipalName is added as an alias to the local account during account creation.",
-            "propertyOrder": 10,
+            "propertyOrder": 85,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -404,7 +404,7 @@
         "IgnoreSites": {
             "title": "Ignore Sites",
             "description": "Ignore sites in AD. This is a compatibility measure for AD installs that have issues with sites.",
-            "propertyOrder": 10,
+            "propertyOrder": 90,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -426,7 +426,7 @@
         "EULATitle": {
             "title": "End User License Agreement Title",
             "description": "Text for the large title in the EULA window.",
-            "propertyOrder": 10,
+            "propertyOrder": 95,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -448,7 +448,7 @@
         "EULASubTitle": {
             "title": "End User License Agreement Subtitle",
             "description": "Text for the subtitle in the EULA window.",
-            "propertyOrder": 10,
+            "propertyOrder": 100,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -470,7 +470,7 @@
     	"EULAText": {
             "title": "End User License Agreement Text",
             "description": "Text to present in the EULA window.",
-            "propertyOrder": 10,
+            "propertyOrder": 110,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -492,7 +492,7 @@
     	"EULAPath": {
             "title": "End User License Agreement Save Path",
             "description": "Path to save acceptance records to.",
-            "propertyOrder": 10,
+            "propertyOrder": 115,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -514,7 +514,7 @@
     	"CreateAdminUser": {
             "title": "Create Admin Users",
             "description": "Will place any local user created at login by NoMAD Login in the local admin group.",
-            "propertyOrder": 10,
+            "propertyOrder": 120,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -536,7 +536,7 @@
         "CreateAdminIfGroupMember": {
             "title": "Group Membership to Create Admin Users",
             "description": "List of groups that should have its members created as local administrators.",
-            "propertyOrder": 10,
+            "propertyOrder": 125,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -562,7 +562,7 @@
     	"UseCNForFullName": {
             "title": "Use User Common Name For Full Name",
             "description": "Use the the user's CN from AD instead of attempting to create the user name from the first and last name attributes of the user's AD record.",
-            "propertyOrder": 10,
+            "propertyOrder": 130,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -584,7 +584,7 @@
     	"UseCNForFullNameFallback": {
             "title": "Use User Common Name For Full Name Fallback",
             "description": "Uses the CN as the fullname on the account when the givenName and sn fields are blank",
-            "propertyOrder": 10,
+            "propertyOrder": 135,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -606,7 +606,7 @@
     	"UserProfileImage": {
             "title": "User Profile Image",
             "description": "Path to an image to set as the user profile image.",
-            "propertyOrder": 10,
+            "propertyOrder": 140,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -628,7 +628,7 @@
     	"DemobilizeUsers": {
             "title": "DemobilizeUsers",
             "description": "Will convert a previously cached mobile account from AD into a regular local user account on login.",
-            "propertyOrder": 10,
+            "propertyOrder": 145,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -650,7 +650,7 @@
     	"DemobilizeSaveAltSecurityIdentities": {
             "title": "Demobilize Preserve AltSecurityIdentities",
             "description": "If true, the AltSecurityIdentities user record attribute should be preserved, useful when moving from mobile accounts with smart card mapping implemented.",
-            "propertyOrder": 10,
+            "propertyOrder": 150,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -672,7 +672,7 @@
     	"DemobilizeForcePasswordCheck": {
             "title": "Demobilize Force Password Check",
             "description": "If true, a password input at the NoMAD login window will be required to demobilize",
-            "propertyOrder": 10,
+            "propertyOrder": 155,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -694,7 +694,7 @@
     	"UserInputOutputPath": {
             "title": "User Input Output Path",
             "description": "Path where the userinfo.plist will be written.",
-            "propertyOrder": 10,
+            "propertyOrder": 160,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -716,7 +716,7 @@
     	"UserInputLogo": {
             "title": "User Input Logo",
             "description": "Path to a logo file to use for the UserInput mechanism.",
-            "propertyOrder": 10,
+            "propertyOrder": 165,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -738,7 +738,7 @@
     	"UserInputTitle": {
             "title": "User Input Title",
             "description": "Title for the UserInput mechanism.",
-            "propertyOrder": 10,
+            "propertyOrder": 170,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -760,7 +760,7 @@
     	"UserInputText": {
             "title": "User Input Text",
             "description": "Text for the UserInput mechanism.",
-            "propertyOrder": 10,
+            "propertyOrder": 175,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -782,7 +782,7 @@
     	"EnableFDE": {
             "title": "Enable FileVault on APFS",
             "description": "On systems using the APFS filesystem, this key will enable FileVault encryption as the user is signing in for the first time.",
-            "propertyOrder": 10,
+            "propertyOrder": 180,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -804,7 +804,7 @@
     	"EnableFDERecoveryKey": {
             "title": "Enable FileVault Recovery Key",
             "description": "Write the output of the fdesetup command to /var/db/.NoMADFDESetup",
-            "propertyOrder": 10,
+            "propertyOrder": 185,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -826,7 +826,7 @@
     	"EnableFDERecoveryKeyPath": {
             "title": "FileVault Recovery Key Path",
             "description": "String of a folder path where the recovery key will be stored. NoLo will create this folder if it does not already exist.",
-            "propertyOrder": 10,
+            "propertyOrder": 190,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -848,7 +848,7 @@
     	"EnableFDERekey": {
             "title": "FileVault Personal Recovery Key Rotation",
             "description": "Determines if the FileVault personal recovery key should be rotated when a valid FileVault user signs in.",
-            "propertyOrder": 10,
+            "propertyOrder": 195,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -870,7 +870,7 @@
     	"LoginScreen": {
             "title": "macOS Style Login Window",
             "description": "If set to yes, a macOS-style loginscreen will be presented instead of the NoMAD Login loginwindow style.",
-            "propertyOrder": 10,
+            "propertyOrder": 200,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -892,7 +892,7 @@
     	"UsernameFieldPlaceholder": {
             "title": "Username Field Placeholder",
             "description": "Placeholder text to show in the username textfield.",
-            "propertyOrder": 10,
+            "propertyOrder": 205,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -914,7 +914,7 @@
     	"LoginLogo": {
             "title": "Login Logo",
             "description": "Path to the logo to display on the login screen. If set to NONE, no logo will be shown.",
-            "propertyOrder": 10,
+            "propertyOrder": 210,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -936,7 +936,7 @@
     	"LoginLogoAlpha": {
             "title": "Login Logo Alpha",
             "description": "Alpha value of the logo image.",
-            "propertyOrder": 10,
+            "propertyOrder": 215,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -958,7 +958,7 @@
     	"BackgroundImage": {
             "title": "Login Window Background Image",
             "description": "Path to the background image to be used.",
-            "propertyOrder": 10,
+            "propertyOrder": 220,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -980,7 +980,7 @@
     	"BackgroundImageAlpha": {
             "title": "Login Window Background Image Alpha",
             "description": "Alpha value of the logo image.",
-            "propertyOrder": 10,
+            "propertyOrder": 225,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1002,7 +1002,7 @@
     	"AllowNetworkSelection": {
             "title": "Show Network Selection",
             "description": "Path to the background image to be used.",
-            "propertyOrder": 10,
+            "propertyOrder": 230,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1024,7 +1024,7 @@
         "DefaultSystemInformation": {
             "title": "Default System Information",
             "description": "Defines which system information should be showed on login window, by default",
-            "propertyOrder": 10,
+            "propertyOrder": 235,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1048,7 +1048,7 @@
     	"PowerControlDisabled": {
             "title": "Hide Shutdown and Restart",
             "description": "If set to yes, hides the shutdown and restart buttons",
-            "propertyOrder": 10,
+            "propertyOrder": 240,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1070,7 +1070,7 @@
     	"MessagePasswordSync": {
             "title": "Password Sync Message",
             "description": "Message to show when the password needs to sync",
-            "propertyOrder": 10,
+            "propertyOrder": 245,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1092,7 +1092,7 @@
     	"ManageSecureTokens": {
             "title": "Enable Secure Token Management",
             "description": "This key will enable SecureToken management capabilites in NomadLogin 1.4. This utilizes a service account which can be modified from default using the below optional preferences.",
-            "propertyOrder": 10,
+            "propertyOrder": 250,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1114,7 +1114,7 @@
     	"SecureTokenManagementEnableOnlyAdminUsers": {
             "title": "Secure Token Enable Only Admin User",
             "description": "If enabled, the SecureToken service account will only enable administrative users created with NoMAD Login.",
-            "propertyOrder": 10,
+            "propertyOrder": 255,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1136,7 +1136,7 @@
     	"SecureTokenManagementIconPath": {
             "title": "Secure Token Icon Path",
             "description": "Path of the icon to be used for the user",
-            "propertyOrder": 10,
+            "propertyOrder": 260,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1158,7 +1158,7 @@
     	"SecureTokenManagementOnlyEnableFirstUser": {
             "title": "Secure Token Enable Only First User",
             "description": "If enabled, NoMAD Login will only enable the first user that is eligable for a SecureToken, and delete the service account afterwards.",
-            "propertyOrder": 10,
+            "propertyOrder": 265,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1180,7 +1180,7 @@
     	"SecureTokenManagementFullName": {
             "title": "Secure Token Service Account Full Name",
             "description": "Defines a custom Full Name for the SecureToken service account",
-            "propertyOrder": 10,
+            "propertyOrder": 270,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1202,7 +1202,7 @@
     	"SecureTokenManagementUID": {
             "title": "Secure Token Service Account UID",
             "description": "Defines a custom password storage location for the SecureToken service account password",
-            "propertyOrder": 10,
+            "propertyOrder": 275,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1224,7 +1224,7 @@
     	"SecureTokenManagementPasswordLocation": {
             "title": "Secure Token Service Account Password Storage Path",
             "description": "Defines a custom password storage location for the SecureToken service account password",
-            "propertyOrder": 10,
+            "propertyOrder": 280,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1246,7 +1246,7 @@
         "SecureTokenManagementPasswordLength": {
             "title": "Secure Token Service Account Password Length",
             "description": "Defines which system information should be showed on login window, by default",
-            "propertyOrder": 10,
+            "propertyOrder": 285,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1270,7 +1270,7 @@
     	"SecureTokenManagementUsername": {
             "title": "Secure Token Service Account Username",
             "description": "Defines a a custom username for the SecureToken service account",
-            "propertyOrder": 10,
+            "propertyOrder": 290,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1292,7 +1292,7 @@
     	"ScriptPath": {
             "title": "Script Path",
             "description": "Path to the script or other executable.",
-            "propertyOrder": 10,
+            "propertyOrder": 295,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1314,7 +1314,7 @@
         "ScriptArgs": {
             "title": "Script Arguments",
             "description": "Arguments to be used with the script. <<User>> will be replaced with the current user's shortname, <<First>> with the current user's first name, <<Last>> with the current user's last name, <<Principal>> with the current user's Kerberos principal.",
-            "propertyOrder": 10,
+            "propertyOrder": 300,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1340,7 +1340,7 @@
     	"UIDTool": {
             "title": "UID Tool",
             "description": "String to determine the path of an executable that is run when a new user is created. It is expected to return the UID that the user should be created with. It passes in the new users username as the first argument, default is to use the built in functionality",
-            "propertyOrder": 10,
+            "propertyOrder": 305,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1362,7 +1362,7 @@
     	"GUIDTool": {
             "title": "GUID Tool",
             "description": "String to determine the path of an executable that is run when a new user is created. It is expected to return the GUID that the user should be created with. It passes in the new users username as the first argument, default is to use the built in functionality",
-            "propertyOrder": 10,
+            "propertyOrder": 310,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1384,7 +1384,7 @@
         "NotifyLogStyle": {
             "title": "Add Notify to Management Log File",
             "description": "Adds the appropriate log file to the the Notify mechanism.",
-            "propertyOrder": 10,
+            "propertyOrder": 315,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1407,7 +1407,7 @@
         "KeychainCreate": {
             "title": "Create Keychain",
             "description": "Create keychain if it does not exist.",
-            "propertyOrder": 10,
+            "propertyOrder": 320,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1429,7 +1429,7 @@
         "KeychainAddNoMAD": {
             "title": "Add NoMAD to Keychain",
             "description": "Add a NoMAD entry into the keychain.",
-            "propertyOrder": 10,
+            "propertyOrder": 325,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1451,7 +1451,7 @@
         "CustomNoMADLocation": {
             "title": "Custom NoMAD Location",
             "description": "Add a NoMAD entry into the keychain.",
-            "propertyOrder": 10,
+            "propertyOrder": 330,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1473,7 +1473,7 @@
         "LastUser": {
             "title": "Last User Shortname",
             "description": "Shortname of the last user to login. This allows NoMAD to login on first launch.",
-            "propertyOrder": 10,
+            "propertyOrder": 335,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1495,7 +1495,7 @@
         "KeychainReset": {
             "title": "Reset Keychain if Password Doesn't Match",
             "description": "Reset keychain if login password doesn't match.",
-            "propertyOrder": 10,
+            "propertyOrder": 340,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1517,7 +1517,7 @@
         "GuestUser": {
             "title": "Allow Guest User Login",
             "description": "Allows guest users login",
-            "propertyOrder": 10,
+            "propertyOrder": 345,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1539,7 +1539,7 @@
         "GuestUserAccounts": {
             "title": "Guest User Accounts",
             "description": "List of names that can be entered into the username field to trigger a guest user creation",
-            "propertyOrder": 10,
+            "propertyOrder": 350,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1565,7 +1565,7 @@
         "GuestUserAccountPasswordPath": {
             "title": "Guest User Password Path",
             "description": "The path to write out the guest users randomly generated password",
-            "propertyOrder": 10,
+            "propertyOrder": 355,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1587,7 +1587,7 @@
         "GuestUserFirst": {
             "title": "Guest User First Name",
             "description": "Defines the first name of the guest user account",
-            "propertyOrder": 10,
+            "propertyOrder": 360,
             "anyOf": [
                 {
                     "title": "Not Configured",
@@ -1609,7 +1609,7 @@
         "GuestUserLast": {
             "title": "Guest User Last Name",
             "description": "Defines the last name of the guest user account",
-            "propertyOrder": 10,
+            "propertyOrder": 365,
             "anyOf": [
                 {
                     "title": "Not Configured",
