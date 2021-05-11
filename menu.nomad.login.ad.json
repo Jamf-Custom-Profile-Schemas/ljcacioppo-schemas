@@ -1,0 +1,1632 @@
+{
+    "title": "menu.nomad.login.ad",
+    "description": "Preference Domain: menu.nomad.login.ad,  Application: NoMAD Login",
+    "__version": "1.4.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+        "ADDomain": {
+            "title": "Active Directory Domain",
+            "description": "Defines the AD domain you’re working with.",
+            "propertyOrder": 1,
+            "type": "string",
+            "options": {
+                "infoText": "Key: ADDomain"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "DenyLocal": {
+            "title": "Deny Local Users",
+            "description": "Determines if local user accounts are allowed to sign in, or if all auth is forced through AD.",
+            "propertyOrder": 10,
+            "anyOf": [
+                 {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                 {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: DenyLocal"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "DenyLocalExcluded": {
+            "title": "Deny Local User Exclusions",
+            "description": "List of local user shortnames that will be allowed to authenticate locally instead of via AD.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: DenyLocalExcluded"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "DenyLoginUnlessGroupMember": {
+            "title": "Allowed Group Membership User Logins",
+            "description": "List of AD group names. When an AD user is authenticating, only allow login if the user is a member of one of these groups.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: DenyLoginUnlessGroupMember"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "RecursiveGroupLookup": {
+            "title": "Recursive Group Lookup",
+            "description": "If set to yes, group membership lookups should be done recursively.",
+            "propertyOrder": 10,
+            "anyOf": [
+                 {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                 {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: RecursiveGroupLookup"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "Migrate": {
+            "title": "Migrate",
+            "description": "If true, migrate users",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: Migrate"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "MigrateUsersHide": {
+            "title": "Users Hidden From Migration",
+            "description": "List of names of users that should be hidden from user migration candidates during selection",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: MigrateUsersHide"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "PasswordOverwriteSilent": {
+            "title": "Password Overwrite Silent",
+            "description": "When DenyLocal and PasswordOverwriteSilent are enabled and the user does not have a secure token NoLo will force overwrite the users password to the new password.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: PasswordOverwriteSilent"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "PasswordOverwriteOptional": {
+            "title": "Password Overwrite Optional",
+            "description": "When DenyLocal and PasswordOverwriteSilent are enabled and the user does not have a secure token NoLo will force overwrite the users password to the new password.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: PasswordOverwriteOptional"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "LocalFallback": {
+            "title": "Local Fallback",
+            "description": "When enabled, login fallbacks to local auth if the network is not available.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LocalFallback"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "LDAPServers": {
+            "title": "LDAP Servers",
+            "description": "List of LDAP servers that you would like to use for AD authentication instead of using SRV record lookup.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: LDAPServers"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "LDAPOverSSL": {
+            "title": "LDAP Over SSL",
+            "description": "Determines if NoMAD Login uses LDAP over SSL.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LDAPOverSSL"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "AdditionalADDomains": {
+            "title": "Additional Active Directory Domains",
+            "description": "List of domains to append at the loginwindow. If not set, the standard Managed Domain policy will apply.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: AdditionalADDomains"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "AdditionalADDomainsList": {
+            "title": "Domain Dropdown List",
+            "description": "List of LDAP servers to display in the pulldown menu in the Login Window. Users can select a domain from the menu and then only enter the shortname in the text field.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: AdditionalADDomainsList"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "TextFields": {
+            "title": "NT to AD Domain Mappings",
+            "description": "List of LDAP servers to display in the pulldown menu in the Login Window. Users can select a domain from the menu and then only enter the shortname in the text field.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: TextFields"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "AliasNTName": {
+            "title": "Alias NT Name",
+            "description": "If enabled, the user's NT style name is added as an alias to the local account during account creation.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: AliasNTName"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "AliasUPN": {
+            "title": "Alias User Principal Name",
+            "description": "If enabled, the user's UserPrincipalName is added as an alias to the local account during account creation.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: AliasUPN"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "IgnoreSites": {
+            "title": "Ignore Sites",
+            "description": "Ignore sites in AD. This is a compatibility measure for AD installs that have issues with sites.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: IgnoreSites"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "EULATitle": {
+            "title": "End User License Agreement Title",
+            "description": "Text for the large title in the EULA window.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EULATitle"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },        
+        "EULASubTitle": {
+            "title": "End User License Agreement Subtitle",
+            "description": "Text for the subtitle in the EULA window.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EULASubTitle"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },            
+    	"EULAText": {
+            "title": "End User License Agreement Text",
+            "description": "Text to present in the EULA window.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EULAText"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },            
+    	"EULAPath": {
+            "title": "End User License Agreement Save Path",
+            "description": "Path to save acceptance records to.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EULAPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"CreateAdminUser": {
+            "title": "Create Admin Users",
+            "description": "Will place any local user created at login by NoMAD Login in the local admin group.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: CreateAdminUser"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "CreateAdminIfGroupMember": {
+            "title": "Group Membership to Create Admin Users",
+            "description": "List of groups that should have its members created as local administrators.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: CreateAdminIfGroupMember"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },      
+    	"UseCNForFullName": {
+            "title": "Use User Common Name For Full Name",
+            "description": "Use the the user's CN from AD instead of attempting to create the user name from the first and last name attributes of the user's AD record.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UseCNForFullName"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },    
+    	"UseCNForFullNameFallback": {
+            "title": "Use User Common Name For Full Name Fallback",
+            "description": "Uses the CN as the fullname on the account when the givenName and sn fields are blank",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UseCNForFullNameFallback"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        }, 
+    	"UserProfileImage": {
+            "title": "User Profile Image",
+            "description": "Path to an image to set as the user profile image.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UserProfileImage"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },   
+    	"DemobilizeUsers": {
+            "title": "DemobilizeUsers",
+            "description": "Will convert a previously cached mobile account from AD into a regular local user account on login.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: DemobilizeUsers"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        }, 
+    	"DemobilizeSaveAltSecurityIdentities": {
+            "title": "Demobilize Preserve AltSecurityIdentities",
+            "description": "If true, the AltSecurityIdentities user record attribute should be preserved, useful when moving from mobile accounts with smart card mapping implemented.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: DemobilizeSaveAltSecurityIdentities"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },              
+    	"DemobilizeForcePasswordCheck": {
+            "title": "Demobilize Force Password Check",
+            "description": "If true, a password input at the NoMAD login window will be required to demobilize",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: DemobilizeForcePasswordCheck"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UserInputOutputPath": {
+            "title": "User Input Output Path",
+            "description": "Path where the userinfo.plist will be written.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UserInputOutputPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UserInputLogo": {
+            "title": "User Input Logo",
+            "description": "Path to a logo file to use for the UserInput mechanism.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UserInputLogo"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UserInputTitle": {
+            "title": "User Input Title",
+            "description": "Title for the UserInput mechanism.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UserInputTitle"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UserInputText": {
+            "title": "User Input Text",
+            "description": "Text for the UserInput mechanism.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UserInputText"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },                   
+    	"EnableFDE": {
+            "title": "Enable FileVault on APFS",
+            "description": "On systems using the APFS filesystem, this key will enable FileVault encryption as the user is signing in for the first time.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EnableFDE"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"EnableFDERecoveryKey": {
+            "title": "Enable FileVault Recovery Key",
+            "description": "Write the output of the fdesetup command to /var/db/.NoMADFDESetup",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EnableFDERecoveryKey"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },       
+    	"EnableFDERecoveryKeyPath": {
+            "title": "FileVault Recovery Key Path",
+            "description": "String of a folder path where the recovery key will be stored. NoLo will create this folder if it does not already exist.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EnableFDERecoveryKeyPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"EnableFDERekey": {
+            "title": "FileVault Personal Recovery Key Rotation",
+            "description": "Determines if the FileVault personal recovery key should be rotated when a valid FileVault user signs in.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: EnableFDERekey"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"LoginScreen": {
+            "title": "macOS Style Login Window",
+            "description": "If set to yes, a macOS-style loginscreen will be presented instead of the NoMAD Login loginwindow style.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LoginScreen"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UsernameFieldPlaceholder": {
+            "title": "Username Field Placeholder",
+            "description": "Placeholder text to show in the username textfield.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UsernameFieldPlaceholder"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"LoginLogo": {
+            "title": "Login Logo",
+            "description": "Path to the logo to display on the login screen. If set to NONE, no logo will be shown.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LoginLogo"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },         
+    	"LoginLogoAlpha": {
+            "title": "Login Logo Alpha",
+            "description": "Alpha value of the logo image.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LoginLogoAlpha"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"BackgroundImage": {
+            "title": "Login Window Background Image",
+            "description": "Path to the background image to be used.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: BackgroundImage"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },         
+    	"BackgroundImageAlpha": {
+            "title": "Login Window Background Image Alpha",
+            "description": "Alpha value of the logo image.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ],
+            "options": {
+                "infoText": "Key: BackgroundImageAlpha"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"AllowNetworkSelection": {
+            "title": "Show Network Selection",
+            "description": "Path to the background image to be used.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: AllowNetworkSelection"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "DefaultSystemInformation": {
+            "title": "Default System Information",
+            "description": "Defines which system information should be showed on login window, by default",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "enum": ["None", "Serial", "MAC", "Hostname", "ComputerName", "SystemVersion", "IP"],
+            "options": {
+                "infoText": "Key: DefaultSystemInformation"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+
+        },
+    	"PowerControlDisabled": {
+            "title": "Hide Shutdown and Restart",
+            "description": "If set to yes, hides the shutdown and restart buttons",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: PowerControlDisabled"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"MessagePasswordSync": {
+            "title": "Password Sync Message",
+            "description": "Message to show when the password needs to sync",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: MessagePasswordSync"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"ManageSecureTokens": {
+            "title": "Enable Secure Token Management",
+            "description": "This key will enable SecureToken management capabilites in NomadLogin 1.4. This utilizes a service account which can be modified from default using the below optional preferences.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: ManageSecureTokens"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"SecureTokenManagementEnableOnlyAdminUsers": {
+            "title": "Secure Token Enable Only Admin User",
+            "description": "If enabled, the SecureToken service account will only enable administrative users created with NoMAD Login.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementEnableOnlyAdminUsers"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"SecureTokenManagementIconPath": {
+            "title": "Secure Token Icon Path",
+            "description": "Path of the icon to be used for the user",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementIconPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"SecureTokenManagementOnlyEnableFirstUser": {
+            "title": "Secure Token Enable Only First User",
+            "description": "If enabled, NoMAD Login will only enable the first user that is eligable for a SecureToken, and delete the service account afterwards.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementOnlyEnableFirstUser"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"SecureTokenManagementFullName": {
+            "title": "Secure Token Service Account Full Name",
+            "description": "Defines a custom Full Name for the SecureToken service account",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementFullName"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },    
+    	"SecureTokenManagementUID": {
+            "title": "Secure Token Service Account UID",
+            "description": "Defines a custom password storage location for the SecureToken service account password",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementUID"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"SecureTokenManagementPasswordLocation": {
+            "title": "Secure Token Service Account Password Storage Path",
+            "description": "Defines a custom password storage location for the SecureToken service account password",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementPasswordLocation"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "SecureTokenManagementPasswordLength": {
+            "title": "Secure Token Service Account Password Length",
+            "description": "Defines which system information should be showed on login window, by default",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "integer"
+                }
+            ],
+            "enum": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+            "options": {
+                "infoText": "Key: SecureTokenManagementPasswordLength"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+
+        },
+    	"SecureTokenManagementUsername": {
+            "title": "Secure Token Service Account Username",
+            "description": "Defines a a custom username for the SecureToken service account",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: SecureTokenManagementUsername"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"ScriptPath": {
+            "title": "Script Path",
+            "description": "Path to the script or other executable.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: ScriptPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "ScriptArgs": {
+            "title": "Script Arguments",
+            "description": "Arguments to be used with the script. <<User>> will be replaced with the current user's shortname, <<First>> with the current user's first name, <<Last>> with the current user's last name, <<Principal>> with the current user's Kerberos principal.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: ScriptArgs"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"UIDTool": {
+            "title": "UID Tool",
+            "description": "String to determine the path of an executable that is run when a new user is created. It is expected to return the UID that the user should be created with. It passes in the new users username as the first argument, default is to use the built in functionality",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: UIDTool"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+    	"GUIDTool": {
+            "title": "GUID Tool",
+            "description": "String to determine the path of an executable that is run when a new user is created. It is expected to return the GUID that the user should be created with. It passes in the new users username as the first argument, default is to use the built in functionality",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: GUIDTool"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "NotifyLogStyle": {
+            "title": "Add Notify to Management Log File",
+            "description": "Adds the appropriate log file to the the Notify mechanism.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "enum": ["None", "Jamf", "Filewave", "Munki"],
+            "options": {
+                "infoText": "Key: NotifyLogStyle"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "KeychainCreate": {
+            "title": "Create Keychain",
+            "description": "Create keychain if it does not exist.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: KeychainCreate"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "KeychainAddNoMAD": {
+            "title": "Add NoMAD to Keychain",
+            "description": "Add a NoMAD entry into the keychain.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: KeychainAddNoMAD"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },  
+        "CustomNoMADLocation": {
+            "title": "Custom NoMAD Location",
+            "description": "Add a NoMAD entry into the keychain.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: CustomNoMADLocation"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "LastUser": {
+            "title": "Last User Shortname",
+            "description": "Shortname of the last user to login. This allows NoMAD to login on first launch.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: LastUser"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "KeychainReset": {
+            "title": "Reset Keychain if Password Doesn't Match",
+            "description": "Reset keychain if login password doesn't match.",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: KeychainReset"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "GuestUser": {
+            "title": "Allow Guest User Login",
+            "description": "Allows guest users login",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean"
+                }
+            ],
+            "options": {
+                "infoText": "Key: GuestUser"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "GuestUserAccounts": {
+            "title": "Guest User Accounts",
+            "description": "List of names that can be entered into the username field to trigger a guest user creation",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "title": "Attribute"
+                    }
+                }
+            ],
+            "options": {
+                "infoText": "Key: GuestUserAccounts"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "GuestUserAccountPasswordPath": {
+            "title": "Guest User Password Path",
+            "description": "The path to write out the guest users randomly generated password",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: GuestUserAccountPasswordPath"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "GuestUserFirst": {
+            "title": "Guest User First Name",
+            "description": "Defines the first name of the guest user account",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: GuestUserFirst"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        },
+        "GuestUserLast": {
+            "title": "Guest User Last Name",
+            "description": "Defines the last name of the guest user account",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "string"
+                }
+            ],
+            "options": {
+                "infoText": "Key: GuestUserLast"
+            },
+            "links": [{
+                "rel": "More information",
+                "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
+            }]
+        }      
+    }
+}
