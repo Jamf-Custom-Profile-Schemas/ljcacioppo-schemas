@@ -1032,10 +1032,10 @@
                 },
                 {
                     "title": "Configured",
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["None", "Serial", "MAC", "Hostname", "ComputerName", "SystemVersion", "IP"]
                 }
             ],
-            "enum": ["None", "Serial", "MAC", "Hostname", "ComputerName", "SystemVersion", "IP"],
             "options": {
                 "infoText": "Key: DefaultSystemInformation"
             },
@@ -1254,10 +1254,10 @@
                 },
                 {
                     "title": "Configured",
-                    "type": "integer"
+                    "type": "integer",
+                    "enum": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
                 }
             ],
-            "enum": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
             "options": {
                 "infoText": "Key: SecureTokenManagementPasswordLength"
             },
@@ -1392,10 +1392,10 @@
                 },
                 {
                     "title": "Configured",
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["None", "Jamf", "Filewave", "Munki"]
                 }
             ],
-            "enum": ["None", "Jamf", "Filewave", "Munki"],
             "options": {
                 "infoText": "Key: NotifyLogStyle"
             },
