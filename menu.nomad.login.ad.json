@@ -1627,6 +1627,76 @@
                 "rel": "More information",
                 "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
             }]
-        }      
+        },
+        		"UserInputUI": {
+			"title": "UserInputUI",
+			"description": "Settings for Button, PopUps, and TextFields for the UserInputUI setttings",
+			"property_order": 370,
+			"anyOf": [{
+					"type": "null",
+					"title": "Not Configured"
+				},
+				{
+					"title": "Configured",
+					"type": "object",
+					"properties": {
+						"TextFields": {
+							"description": "User Input Text Fields",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"title": "Text Fields",
+								"properties": {
+									"placeholder": {
+										"type": "string"
+									},
+									"title": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"PopUps": {
+							"description": "User Input Pop Ups",
+							"type": "array",
+							"items": {
+								"type": "object",
+								"title": "Pop Ups",
+								"properties": {
+									"title": {
+										"type": "string"
+									},
+									"items": {
+										"type": "array"
+									}
+								}
+							}
+						},
+						"Button": {
+							"description": "User Input Button",
+							"anyOf": [{
+								"type": "null",
+								"title": "Not Configured"
+						},
+						{
+								"title": "Configured",
+								"type": "object",
+								"properties": {
+								"enabled": {
+									"type": "boolean"
+								},
+								"title":{
+									"type": "string"
+								}
+							}
+						}
+						]
+					}
+
+				}
+				
+		}
+		]
+	}      
     }
 }
