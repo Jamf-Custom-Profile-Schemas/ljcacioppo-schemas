@@ -1667,6 +1667,7 @@
 										"type": "string"
 									},
 									"items": {
+										"description": "Select string from dropdown. May currently say null",
 										"type": "array"
 									}
 								}
