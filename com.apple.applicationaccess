@@ -1,0 +1,31 @@
+{
+    "title": "com.apple.applicationaccess",
+    "description": "Preference Domain: com.apple.applicationaccess,  Application: macOS Resrictions",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "allowEraseContentAndSettings": {
+            "title": "Allow Erase All Content And Settings",
+            "description": "Supervised Only. macOS 12 or Later. If set to false, restricts ability to Erase All Content And Settings.",
+            "propertyOrder": 80,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: allowEraseContentAndSettings"
+                                }
+                            }
+            ]
+        }
+    }
+}
