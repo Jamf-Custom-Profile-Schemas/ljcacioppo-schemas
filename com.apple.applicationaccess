@@ -11,7 +11,7 @@
             "allowEraseContentAndSettings": {
             "title": "Allow Erase All Content And Settings",
             "description": "Supervised Only. macOS 12 or Later. If set to false, restricts ability to Erase All Content And Settings.",
-            "propertyOrder": 80,
+            "propertyOrder": 10,
             "anyOf": [
                             {
                                 "title": "Not Configured",
