@@ -26,6 +26,25 @@
                                 }
                             }
             ]
+        },
+            "allowCloudPrivateRelay": {
+            "title": "Allow iCloud Private Relay",
+            "description": "macOS 12 or Later. If set to false, restricts enabling iCloud Private Relay.",
+            "propertyOrder": 20,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: allowCloudPrivateRelay"
+                                }
+                            }
+            ]
         }
     }
 }
