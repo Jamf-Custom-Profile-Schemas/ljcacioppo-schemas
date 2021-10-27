@@ -1,0 +1,31 @@
+{
+    "title": "com.apple.controlcenter",
+    "description": "Preference Domain: com.apple.controlcenter,  Application: macOS Restrictions",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "AirplayRecieverEnabled": {
+            "title": "Allow Airplay Receiver",
+            "description": "macOS 12 or Later. If set to false, restricts ability to AirPlay to Mac. (Yes, the key is actually spelled wrong).",
+            "propertyOrder": 10,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: AirplayRecieverEnabled"
+                                }
+                            }
+            ]
+        }
+    }
+}
