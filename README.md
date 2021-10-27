@@ -5,3 +5,5 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
 * com.apple.applicationaccess 
   * Erase All Content And Settings
   * Allow iCloud Private Relay
+* com.apple.controlcenter
+  * Allow Airplay Receiver
