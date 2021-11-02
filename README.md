@@ -27,3 +27,5 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Allow Airplay Receiver
 * com.apple.TimeMachine
   * Require AC Power
+* com.apple.systempreferences
+  * System Preferences Badge Notifications
