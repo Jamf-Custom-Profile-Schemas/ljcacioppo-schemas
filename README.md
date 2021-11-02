@@ -25,3 +25,5 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Allow Submitting Diagnostic Data
 * com.apple.controlcenter
   * Allow Airplay Receiver
+* com.apple.TimeMachine
+  * Require AC Power
