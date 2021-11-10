@@ -1,0 +1,31 @@
+{
+    "title": "com.apple.icloud.managed",
+    "description": "Preference Domain: com.apple.icloud.managed,  Application: Find My Mac",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "DisableFMMiCloudSetting": {
+            "title": "Disable Find My Mac iCloud Setting",
+            "description": "Disables Find My Mac iCloud Setting. Set to true to disable",
+            "propertyOrder": 10,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: DisableFMMiCloudSetting"
+                                }
+                            }
+            ]
+        }
+    }
+}
