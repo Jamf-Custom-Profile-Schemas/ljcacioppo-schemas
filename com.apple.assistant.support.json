@@ -1,0 +1,31 @@
+{
+    "title": "com.apple.assistant.support",
+    "description": "Preference Domain: com.apple.assistant.support,  Application: Siri",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "Siri Data Sharing Opt-In Status": {
+            "title": "Allow Siri Data Sharing",
+            "description": "If set to 2, disables Siri Data Sharing",
+            "propertyOrder": 10,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "integer",
+                                "default": 2,
+                                "options": {
+                                    "infoText": "Key: Siri Data Sharing Opt-In Status"
+                                }
+                            }
+            ]
+        }
+    }
+}
