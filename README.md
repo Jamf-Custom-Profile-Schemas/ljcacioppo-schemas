@@ -29,3 +29,9 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Require AC Power
 * com.apple.systempreferences
   * System Preferences Badge Notifications
+* com.apple.icloud.managed
+  * Find My Mac
+* com.apple.ironwood.support
+  * Siri
+* com.apple.assistant.support
+  * Siri Data Sharing
