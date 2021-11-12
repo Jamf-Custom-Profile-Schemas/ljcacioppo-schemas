@@ -387,6 +387,25 @@
                                 }
                             }
             ]
+        },
+            "allowContentCaching": {
+            "title": "Allow Content Caching",
+            "description": "Allow use of content caching feature.",
+            "propertyOrder": 20,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean",
+                    "default": true,
+                    "options": {
+                        "infoText": "Key: allowContentCaching"
+                    }
+                }
+            ]
         }
     }
 }
