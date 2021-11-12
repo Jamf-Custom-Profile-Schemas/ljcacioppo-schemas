@@ -1,0 +1,69 @@
+{
+    "title": "com.apple.preferences.sharing.SharingPrefsExtension",
+    "description": "Preference Domain: com.apple.preferences.sharing.SharingPrefsExtension,  Application: Sharing",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "homeSharingUIStatus": {
+            "title": "Home Sharing UI Status",
+            "description": "If set to 0, disables Home Sharing",
+            "propertyOrder": 10,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "integer",
+                                "default": 0,
+                                "options": {
+                                    "infoText": "Key: homeSharingUIStatus"
+                                }
+                            }
+            ]
+        },
+        "legacySharingUIStatus": {
+            "title": "Legacy Sharing UI Status",
+            "description": "If set to 0, disables Legacy Sharing",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "integer",
+                    "default": 0,
+                    "options": {
+                        "infoText": "Key: legacySharingUIStatus"
+                    }
+                }
+            ]
+        },
+        "mediaSharingUIStatus": {
+            "title": "Media Sharing UI Status",
+            "description": "If set to 0, disables Media Sharing",
+            "propertyOrder": 10,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "integer",
+                    "default": 0,
+                    "options": {
+                        "infoText": "Key: mediaSharingUIStatus"
+                    }
+                }
+            ]
+        }
+    }
+}
