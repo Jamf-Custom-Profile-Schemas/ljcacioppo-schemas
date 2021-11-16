@@ -49,7 +49,7 @@
             "allowPasswordProximityRequests": {
             "title": "Allow Password Proximity Requests",
             "description": "macOS 10.14 or Later. If set to false, restricts enabling iCloud Private Relay.",
-            "propertyOrder": 20,
+            "propertyOrder": 30,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -68,7 +68,7 @@
             "allowActivityContinuation": {
             "title": "Allow Handoff",
             "description": "macOS 10.15 and later. If false, disables activity continuation.",
-            "propertyOrder": 20,
+            "propertyOrder": 40,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -87,7 +87,7 @@
             "allowPasswordAutoFill": {
             "title": "Allow Password Auto Fill",
             "description": "Supervised Only. macOS 10.14 and later. If false, disables the AutoFill Passwords feature",
-            "propertyOrder": 20,
+            "propertyOrder": 50,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -106,7 +106,7 @@
             "allowPasswordSharing": {
             "title": "Allow Password Sharing",
             "description": "Supervised Only. macOS 10.14 and later. If false, disables requesting passwords from nearby devices.",
-            "propertyOrder": 20,
+            "propertyOrder": 60,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -125,7 +125,7 @@
             "allowAirDrop": {
             "title": "Allow AirDrop",
             "description": "Supervised Only. macOS 10.13 and later. If false, disables AirDrop. ",
-            "propertyOrder": 20,
+            "propertyOrder": 70,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -144,7 +144,7 @@
             "allowCloudPhotoLibrary": {
             "title": "Allow iCloud Photo Library",
             "description": "macOS 10.12 and later. If false, disables iCloud Photo Library. Any photos not fully downloaded from iCloud Photo Library to the device are removed from local storage.",
-            "propertyOrder": 20,
+            "propertyOrder": 80,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -163,7 +163,7 @@
             "allowCloudReminders": {
             "title": "Allow iCloud Reminders",
             "description": "macOS 10.12 or Later. If false, disables iCloud Reminder services.",
-            "propertyOrder": 20,
+            "propertyOrder": 90,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -182,7 +182,7 @@
             "allowCloudDesktopAndDocuments": {
             "title": "Allow iCloud Desktop and Documents",
             "description": "macOS 10.12.4 and later. If false, disables cloud desktop and document services.",
-            "propertyOrder": 20,
+            "propertyOrder": 110,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -201,7 +201,7 @@
             "allowCloudKeychainSync": {
             "title": "Allow iCloud Keychain Sync",
             "description": "Supervised Only. macOS 10.12 and later. If false, disables iCloud keychain synchronization.",
-            "propertyOrder": 20,
+            "propertyOrder": 120,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -220,7 +220,7 @@
             "allowCloudNotes": {
             "title": "Allow iCloud Notes",
             "description": "macOS 10.12 or Later. If false, disables iCloud Notes services.",
-            "propertyOrder": 20,
+            "propertyOrder": 130,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -239,7 +239,7 @@
             "allowCloudDocumentSync": {
             "title": "Allow iCloud Document Sync",
             "description": "macOS 10.11 and later. If false, disables document and key-value syncing to iCloud.",
-            "propertyOrder": 20,
+            "propertyOrder": 140,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -258,7 +258,7 @@
             "allowCloudBookmarks": {
             "title": "Allow iCloud Bookmarks",
             "description": "macOS 10.12 and later. If false, disables iCloud Bookmark sync.",
-            "propertyOrder": 20,
+            "propertyOrder": 150,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -277,7 +277,7 @@
             "allowCloudMail": {
             "title": "Allow iCloud Mail",
             "description": "macOS 10.12 or Later. If false, disables iCloud Mail services.",
-            "propertyOrder": 20,
+            "propertyOrder": 160,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -296,7 +296,7 @@
             "allowCloudCalendar": {
             "title": "Allow iCloud Calendar",
             "description": "macOS 10.12 or Later. If false, disables iCloud Calendar services.",
-            "propertyOrder": 20,
+            "propertyOrder": 170,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -315,7 +315,7 @@
             "allowCloudAddressBook": {
             "title": "Allow iCloud Address Book",
             "description": "macOS 10.12 and later. If false, disables iCloud Address Book services. ",
-            "propertyOrder": 20,
+            "propertyOrder": 180,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -334,7 +334,7 @@
             "allowFindMyDevice": {
             "title": "Allow Find My Device",
             "description": "Supervised Only. If false, disables Find My Device",
-            "propertyOrder": 20,
+            "propertyOrder": 190,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -353,7 +353,7 @@
             "allowFindMyFriends": {
             "title": "Allow Find My Friends",
             "description": "Supervised Only. If false, disables Find My Friends",
-            "propertyOrder": 20,
+            "propertyOrder": 200,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -372,7 +372,7 @@
             "allowDiagnosticSubmission": {
             "title": "Allow Submitting Diagnostic Data",
             "description": "macOS 10.13 and later. If false, prevents the device from automatically submitting diagnostic reports to Apple.",
-            "propertyOrder": 20,
+            "propertyOrder": 210,
             "anyOf": [
                             {
                                 "title": "Not Configured",
@@ -391,7 +391,7 @@
             "allowContentCaching": {
             "title": "Allow Content Caching",
             "description": "Allow use of content caching feature.",
-            "propertyOrder": 20,
+            "propertyOrder": 220,
             "anyOf": [
                 {
                     "title": "Not Configured",
