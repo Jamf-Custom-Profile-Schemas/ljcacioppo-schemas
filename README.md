@@ -2,6 +2,8 @@
 
 Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
 * NoMAD Login
+* com.apple.AdLib
+  * Allow Personalized Advertising
 * com.apple.applicationaccess 
   * Erase All Content And Settings
   * Allow iCloud Private Relay
@@ -23,6 +25,7 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Allow Find My Device
   * Allow Find My Friends
   * Allow Submitting Diagnostic Data
+  * Allow Content Caching
 * com.apple.controlcenter
   * Allow Airplay Receiver
 * com.apple.TimeMachine
@@ -33,5 +36,7 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Find My Mac
 * com.apple.ironwood.support
   * Siri
+* com.apple.preferences.sharing.SharingPrefsExtension
+  * Allow/Restrict Media Sharing
 * com.apple.assistant.support
   * Siri Data Sharing
