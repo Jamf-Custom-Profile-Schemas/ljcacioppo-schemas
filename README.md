@@ -1,7 +1,7 @@
 # Jamf Profile Schemas
 
 Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
-* NoMAD Login
+
 * com.apple.AdLib
   * Allow Personalized Advertising
 * com.apple.applicationaccess 
@@ -26,17 +26,18 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Allow Find My Friends
   * Allow Submitting Diagnostic Data
   * Allow Content Caching
+* com.apple.assistant.support
+  * Siri Data Sharing
 * com.apple.controlcenter
   * Allow Airplay Receiver
-* com.apple.TimeMachine
-  * Require AC Power
-* com.apple.systempreferences
-  * System Preferences Badge Notifications
 * com.apple.icloud.managed
   * Find My Mac
 * com.apple.ironwood.support
   * Siri
 * com.apple.preferences.sharing.SharingPrefsExtension
   * Allow/Restrict Media Sharing
-* com.apple.assistant.support
-  * Siri Data Sharing
+* com.apple.systempreferences
+  * System Preferences Badge Notifications
+* com.apple.TimeMachine
+  * Require AC Power
+* NoMAD Login
