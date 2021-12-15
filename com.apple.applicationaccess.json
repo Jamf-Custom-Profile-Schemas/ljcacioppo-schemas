@@ -48,7 +48,7 @@
         },
             "allowPasswordProximityRequests": {
             "title": "Allow Password Proximity Requests",
-            "description": "macOS 10.14 or Later. If set to false, restricts enabling iCloud Private Relay.",
+            "description": "macOS 10.14 or Later. If set to false, disables Password Proximity Requests.",
             "propertyOrder": 30,
             "anyOf": [
                             {
