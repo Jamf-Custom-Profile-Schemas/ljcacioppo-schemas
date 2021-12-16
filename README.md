@@ -4,6 +4,8 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
 
 * com.apple.AdLib
   * Allow Personalized Advertising
+* com.apple.MCX
+  * Disable Guest Account
 * com.apple.applicationaccess 
   * Erase All Content And Settings
   * Allow iCloud Private Relay
