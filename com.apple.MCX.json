@@ -1,0 +1,31 @@
+{
+    "title": "com.apple.ironwood.support",
+    "description": "Preference Domain: com.apple.MCX,  Application: Guest Account",
+    "__version": "12.0",
+    "__feedback": "leonardo.cacioppo@me.com",
+    "type": "object",
+    "options": {
+        "remove_empty_properties": true
+    },
+    "properties": {
+            "DisableGuestAccount": {
+            "title": "Disable Guest Account",
+            "description": "If true, disables Guest Account",
+            "propertyOrder": 10,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: Disable Guest Account"
+                                }
+                            }
+            ]
+        }
+    }
+}
