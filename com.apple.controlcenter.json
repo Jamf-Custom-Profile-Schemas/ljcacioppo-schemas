@@ -26,6 +26,25 @@
                                 }
                             }
             ]
+        },
+        	"BatteryShowPercentage": {
+            "title": "Show Battery Percentage",
+            "description": "If set to true. Battery percentage will show in menubar.",
+            "propertyOrder": 20,
+            "anyOf": [
+                            {
+                                "title": "Not Configured",
+                                "type": "null"
+                            },
+                            {
+                                "title": "Configured",
+                                "type": "boolean",
+                                "default": true,
+                                "options": {
+                                    "infoText": "Key: BatteryShowPercentage"
+                                }
+                            }
+            ]
         }
     }
 }
