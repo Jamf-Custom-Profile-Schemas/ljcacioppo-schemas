@@ -32,6 +32,7 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Siri Data Sharing
 * com.apple.controlcenter
   * Allow Airplay Receiver
+  * Show Battery Percentage
 * com.apple.icloud.managed
   * Find My Mac
 * com.apple.ironwood.support
