@@ -331,7 +331,7 @@
                 "href": "https://gitlab.com/orchardandgrove-oss/NoMADLogin-AD/-/wikis/Configuration/preferences"
             }]
         },
-        "TextFields": {
+        "NTtoADDomainMappings": {
             "title": "NT to AD Domain Mappings",
             "description": "List of LDAP servers to display in the pulldown menu in the Login Window. Users can select a domain from the menu and then only enter the shortname in the text field.",
             "propertyOrder": 75,
@@ -350,7 +350,7 @@
                 }
             ],
             "options": {
-                "infoText": "Key: TextFields"
+                "infoText": "Key: NTtoADDomainMappings"
             },
             "links": [{
                 "rel": "More information",
