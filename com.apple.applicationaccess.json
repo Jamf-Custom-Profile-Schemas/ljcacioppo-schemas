@@ -406,6 +406,25 @@
                     }
                 }
             ]
+        },
+            "allowAirPlayIncomingRequests": {
+            "title": "Allow AirPlay Receiver",
+            "description": "Allow use of AirPlay Receiver.",
+            "propertyOrder": 230,
+            "anyOf": [
+                {
+                    "title": "Not Configured",
+                    "type": "null"
+                },
+                {
+                    "title": "Configured",
+                    "type": "boolean",
+                    "default": true,
+                    "options": {
+                        "infoText": "Key: allowAirPlayIncomingRequests"
+                    }
+                }
+            ]
         }
     }
 }
