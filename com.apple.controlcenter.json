@@ -8,29 +8,10 @@
         "remove_empty_properties": true
     },
     "properties": {
-            "AirplayRecieverEnabled": {
-            "title": "Allow Airplay Receiver",
-            "description": "macOS 12 or Later. If set to false, restricts ability to AirPlay to Mac. (Yes, the key is actually spelled wrong).",
-            "propertyOrder": 10,
-            "anyOf": [
-                            {
-                                "title": "Not Configured",
-                                "type": "null"
-                            },
-                            {
-                                "title": "Configured",
-                                "type": "boolean",
-                                "default": true,
-                                "options": {
-                                    "infoText": "Key: AirplayRecieverEnabled"
-                                }
-                            }
-            ]
-        },
-        	"BatteryShowPercentage": {
+            "BatteryShowPercentage": {
             "title": "Show Battery Percentage",
             "description": "If set to true. Battery percentage will show in menubar.",
-            "propertyOrder": 20,
+            "propertyOrder": 10,
             "anyOf": [
                             {
                                 "title": "Not Configured",
