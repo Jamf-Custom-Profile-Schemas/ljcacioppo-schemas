@@ -28,10 +28,10 @@ Collection of Schemas for the new Application & Custom Settings within Jamf Pro.
   * Allow Find My Friends
   * Allow Submitting Diagnostic Data
   * Allow Content Caching
+  * Allow Airplay Receiver
 * com.apple.assistant.support
   * Siri Data Sharing
 * com.apple.controlcenter
-  * Allow Airplay Receiver
   * Show Battery Percentage
 * com.apple.icloud.managed
   * Find My Mac
